@@ -1,0 +1,30 @@
+#include <io.h>
+#include <delay.h>
+
+flash unsigned char digit[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
+
+void split(unsigned char v, unsigned char *tens, unsigned char *ones)
+{
+    *tens = v / 10;
+    *ones = v % 10;
+}
+
+unsigned char i, t, o;
+
+void main(void)
+{
+    DDRC = 0xff;
+    DDRD = 0xff;
+
+    while (1)
+    {
+        split(i, &t, &o);
+        PORTC = digit[t];
+        PORTD = digit[o];
+        delay_ms(300);
+
+        i++;
+        if (i == 100)
+            i = 0;
+    }
+}
