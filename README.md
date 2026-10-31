@@ -9,12 +9,7 @@ Part 3 of the **Odyssey trilogy**: [*C Odyssey*](https://github.com/AbolfazlMoha
 
 An educational collection of AVR (**ATmega32**) programs written in C for **CodeVisionAVR**. It starts with toggling one pin and grows, step by step, into interrupts, timers, ADC and serial communication.
 
-Every folder is named `NN-Name` and contains two sub-folders:
-
-| Folder | Meaning |
-|---|---|
-| `CodeVisionAVR` | The programs. Every exercise is called `Pset01`, `Pset02`, ... and is a complete solution |
-| `Proteus` | The simulation projects (`.pdsprj`) for the exercises of that folder |
+Every folder is named `NN-Name` and holds that chapter's exercises directly. Every exercise is called `Pset01`, `Pset02`, ... and is a complete solution.
 
 A `Pset` can be a single `.c` file or a folder (e.g. `Pset03/`) when the exercise is a multi-file project with its own `.h` / `.c` files.
 
@@ -43,7 +38,7 @@ Each exercise only uses concepts introduced up to its own folder, so you can wor
 **Tools**
 
 - CodeVisionAVR (the code uses `<io.h>`, `<delay.h>`, `flash`, `interrupt [VECTOR]`, `#asm("sei")`)
-- Proteus (or real hardware) to run it
+- Real hardware, or Proteus if you want to simulate the programs
 
 **Assumptions used throughout**
 
@@ -55,9 +50,9 @@ Each exercise only uses concepts introduced up to its own folder, so you can wor
 **Run an exercise**
 
 1. In CodeVisionAVR create a project for ATmega32 and set the clock to 8 MHz.
-2. Add the chosen `.c` file from the `CodeVisionAVR` folder (for folders, add every `.c` file in it) to the project.
+2. Add the chosen `Pset` `.c` file from the chapter folder (for folders, add every `.c` file in it) to the project.
 3. Build in CodeVisionAVR to get the `.hex` file.
-4. Load the `.hex` into Proteus and run the simulation there. Keep the Proteus project in the `Proteus` folder.
+4. Load the `.hex` onto the chip, or into Proteus if you prefer to simulate it.
 
 ## References
 
