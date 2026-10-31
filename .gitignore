@@ -16,11 +16,6 @@ Obj/
 *.bak
 *.err
 
-# Proteus backups
-*.pdsprj.*
-*.pdsbak
-Backup*.pdsprj
-
 # OS / editor
 .DS_Store
 Thumbs.db
